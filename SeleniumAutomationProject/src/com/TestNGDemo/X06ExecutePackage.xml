@@ -1,0 +1,3 @@
+<!--
+package tag should be instead test and which all methods, groups from pacakge that we are trying to execute,
+must always be using TestNG annotations-->

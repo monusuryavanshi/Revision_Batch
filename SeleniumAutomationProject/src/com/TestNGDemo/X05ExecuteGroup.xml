@@ -1,0 +1,5 @@
+<!--
+groups tags are added inside test tag and out side of class always and not inside it
+we need to add "always run  = true" attribute for mandatory methods if using groups to execute.
+Instead if tests are use then not needed to mention always run as true
+-->

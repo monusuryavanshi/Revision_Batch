@@ -8,15 +8,18 @@ import java.util.List;
 
 public class TestDataBuild {
 
-    public D15AddPlaces addPlacePayload()
+    public D15AddPlaces addPlacePayload(String name, String language, String address)
     {
 
         // create object of pojo class addplace
         D15AddPlaces p = new D15AddPlaces();
         p.setAccuracy(50);
-        p.setAddress("29, side layout, cohen 09");
-        p.setLanguage("French-IN");
-        p.setName("Frontline house");
+        //p.setAddress("29, side layout, cohen 09");
+        p.setAddress(address);
+        //p.setLanguage("French-IN");
+        p.setLanguage(language);
+        //p.setName("Frontline house");
+        p.setName(name);
         p.setPhone_number("(+91) 983 893 3937");
         p.setWebsite("http://google.com");
         //setting data through list
@@ -30,5 +33,10 @@ public class TestDataBuild {
         l.setLng(33.427362);
         p.setLocation(l);
         return p;
+    }
+
+    public String deletePlacePayload(String place_id)
+    {
+        return "{\r\n    \"place_id\": \""+place_id+"\"\r\n}";
     }
 }
